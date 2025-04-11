@@ -232,17 +232,6 @@ private:
         return node;
     }
 
-    // Display Pre Order Method
-    void preOrder(Node *node)
-    {
-        if (node)
-        {
-            cout << node->data << " ";
-            preOrder(node->left);
-            preOrder(node->right);
-        }
-    }
-
     // Search Node
     Node *searchUtil(Node *node, T value)
     {
@@ -369,6 +358,17 @@ private:
         mp[node->data]++;
         freqElement(node->left, mp);
         freqElement(node->right, mp);
+    }
+
+    // Display Pre Order Method
+    void preOrder(Node *node)
+    {
+        if (node)
+        {
+            cout << node->data << " ";
+            preOrder(node->left);
+            preOrder(node->right);
+        }
     }
 
     // Display In Order Method
